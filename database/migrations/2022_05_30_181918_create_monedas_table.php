@@ -17,6 +17,7 @@ class CreateMonedasTable extends Migration
             $table->id('id_monedas');
             $table->string('nombre_moneda');
             $table->string('descripcion_moneda');
+            $table->enum('estado',['activo','inactivo']);
             $table->timestamps();
         });
     }

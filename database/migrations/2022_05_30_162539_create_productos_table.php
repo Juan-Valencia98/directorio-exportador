@@ -14,13 +14,18 @@ class CreateProductosTable extends Migration
     public function up()
     {
         Schema::create('productos', function (Blueprint $table) {
-            $table->id();
+            $table->engine = 'InnoDB';
+            $table->id('id_productos');
             $table->string('nombre_producto');
             $table->string('descripcion_producto');
-            $table->string('categoria_producto');
             $table->float('precio_producto');
-            $table->string('moneda_producto');
+            $table->integer('numero_producto');
             $table->string('binario_producto');
+            $table->enum('estado',['activo', 'inactivo']);
+            $table->integer('id_categoria')->unsigned()->index();
+            $table->integer('id_tipo_moneda')->unsigned()->index();
+            $table->integer('id_rubro')->unsigned()->index();
+            $table->integer("id_empresa")->unsigned()->index();
             $table->timestamps();
         });
     }

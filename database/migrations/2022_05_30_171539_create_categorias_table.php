@@ -17,6 +17,7 @@ class CreateCategoriasTable extends Migration
             $table->id('id_categoria');
             $table->string('nombre_categoria');
             $table->string('descripcion_categoria');
+            $table->enum('estado',['activo','inactivo']);
             $table->timestamps();
         });
     }

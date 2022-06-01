@@ -17,6 +17,7 @@ class CreateRubrosTable extends Migration
             $table->id('id_rubro');
             $table->string('nombre_rubro');
             $table->string('descripcion_rubro');
+            $table->enum('estado',['activo','inactivo']);
             $table->timestamps();
         });
     }
