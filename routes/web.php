@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::get('/', function () {
 Route::get('cli-reg-prod', [FormController::class, 'index']);
 
 Route::post('crearProducto', [FormController::class, 'storeProd']);
+
+Route::get('cli-show-prod', [ProductoController::class, 'index']);

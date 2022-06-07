@@ -23,5 +23,9 @@ class CategoriasSeeder extends Seeder
             'nombre_categoria' => 'AGRÍCOLA',
             'descripcion_categoria' => 'Productos agrícolas',
         ]);
+        Categorias::create([
+            'nombre_categoria' => 'AGRÍCOLA',
+            'descripcion_categoria' => 'Productos agrícolas',
+        ]);
     }
 }
