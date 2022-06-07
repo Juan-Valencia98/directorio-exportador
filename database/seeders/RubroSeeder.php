@@ -22,5 +22,17 @@ class RubroSeeder extends Seeder
             'nombre_rubro' => 'PIEZAS METÁLICAS',
             'descripcion_rubro' => 'Campo de la fabriación de metales',
         ]);
+        Rubro::create([
+            'nombre_rubro' => 'PIEZAS METÁLICAS',
+            'descripcion_rubro' => 'Campo de la fabriación de metales',
+        ]);
+        Rubro::create([
+            'nombre_rubro' => 'PIEZAS METÁLICAS',
+            'descripcion_rubro' => 'Campo de la fabriación de metales',
+        ]);
+        Rubro::create([
+            'nombre_rubro' => 'PIEZAS METÁLICAS',
+            'descripcion_rubro' => 'Campo de la fabriación de metales',
+        ]);
     }
 }
