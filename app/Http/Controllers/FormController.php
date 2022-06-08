@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Categorias;
 use App\Models\Monedas;
 use App\Models\Producto;
+use App\Models\Rubro;
+use App\Models\UnidadMedida;
 use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
@@ -17,9 +19,14 @@ class FormController extends Controller
     }
 
     public function index() {
-        $categorias = DB::table('categorias')->get();
-        $monedas = DB::table('monedas')->get();
-        return view('formularios.registrar_producto', ['categorias' => $categorias, 'monedas' => $monedas]);
+        $categorias = Categorias::all();
+        $monedas = Monedas::all();
+        $rubros = Rubro::all();
+        $medidas = UnidadMedida::all();
+        return view('formularios.registrar_producto', ['categorias' => $categorias,
+                                                       'monedas' => $monedas,
+                                                       'rubros' => $rubros,
+                                                       'medidas' => $medidas]);
     }
 
     public function storeProd(Request $data) {

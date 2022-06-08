@@ -33,17 +33,17 @@
                     <div class="grid grid-cols-1">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">DESCRIPCIÓN DE LA
                             EMPRESA</label>
-                        <textarea class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent UpperCase"
-                            type="text" placeholder="" name="descripcion_empresa" id="descripcion_empresa" required
-                            autocomplete="off"></textarea>
+                        <textarea
+                            class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent UpperCase"
+                            type="text" placeholder="" name="descripcion_empresa" id="descripcion_empresa" required autocomplete="off"></textarea>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                     <div class="grid grid-cols-1">
-                        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">RUBRO</label>
+                        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">CATEGORIA</label>
                         <select
                             class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
-                            name="rubro_producto" id="rubro_producto" required autocomplete="off">
+                            name="categoria_producto" id="categoria_producto" required autocomplete="off">
                             <option value="" selected></option>
                             @foreach ($categorias as $categoria)
                                 <option value="{{ $categoria->nombre_categoria }}">{{ $categoria->nombre_categoria }}
@@ -63,13 +63,13 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                     <div class="grid grid-cols-1">
-                        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">CATEGORIA</label>
+                        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">RUBRO</label>
                         <select
                             class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
-                            name="categoria_producto" id="categoria_producto" required autocomplete="off">
+                            name="rubro_producto" id="rubro_producto" required autocomplete="off">
                             <option value="" selected></option>
-                            @foreach ($categorias as $categoria)
-                                <option value="{{ $categoria->nombre_categoria }}">{{ $categoria->nombre_categoria }}
+                            @foreach ($rubros as $rubro)
+                                <option value="{{ $rubro->nombre_rubro }}">{{ $rubro->nombre_rubro }}
                                 </option>
                             @endforeach
                         </select>
@@ -100,8 +100,8 @@
                             class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
                             name="unidad_medida_producto" id="unidad_medida_producto" required autocomplete="off">
                             <option value="" selected></option>
-                            @foreach ($categorias as $categoria)
-                                <option value="{{ $categoria->nombre_categoria }}">{{ $categoria->nombre_categoria }}
+                            @foreach ($medidas as $medida)
+                                <option value="{{ $medida->nombre_medida }}">{{ $medida->nombre_medida }}
                                 </option>
                             @endforeach
                         </select>
@@ -111,9 +111,9 @@
                     <div class="grid grid-cols-1">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">DESCRIPCION DEL
                             PRODUCTO</label>
-                        <textarea class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent UpperCase"
-                            type="textarea" placeholder="" name="descripcion_producto" id="descripcion_producto"
-                            required autocomplete="off"></textarea>
+                        <textarea
+                            class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent UpperCase"
+                            type="textarea" placeholder="" name="descripcion_producto" id="descripcion_producto" required autocomplete="off"></textarea>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">

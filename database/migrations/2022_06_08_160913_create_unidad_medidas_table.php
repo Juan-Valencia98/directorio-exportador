@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMonedasTable extends Migration
+class CreateUnidadMedidasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMonedasTable extends Migration
      */
     public function up()
     {
-        Schema::create('monedas', function (Blueprint $table) {
-            $table->id('id_monedas');
-            $table->string('nombre_moneda');
-            $table->string('descripcion_moneda');
+        Schema::create('unidad_medidas', function (Blueprint $table) {
+            $table->id('id_medidas');
+            $table->string('nombre_medida');
+            $table->string('abrv_medida')->nullable();
+            $table->string('cod_estado')->default('ACT');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateMonedasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('monedas');
+        Schema::dropIfExists('unidad_medidas');
     }
 }
