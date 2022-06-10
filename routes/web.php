@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\EmpresaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,13 @@ Route::get('cli-reg-prod', [FormController::class, 'index']);
 Route::post('crearProducto', [FormController::class, 'storeProd']);
 
 Route::get('cli-show-prod', [ProductoController::class, 'index']);
+
+Route::get('cli-reg-empr', [FormController::class, 'empresa']);
+
+Route::post('crearEmpresa', [FormController::class, 'storeEmpr']);
+
+Route::get('cli-show-empr', [EmpresaController::class, 'index']);
+
+Route::get('cli-show-det-prod/{id}', [ProductoController::class, 'detProd']);
+
+Route::get('cli-show-det-emp/{id}', [EmpresaController::class, 'detEmp']);

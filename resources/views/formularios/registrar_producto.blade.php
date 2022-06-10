@@ -18,26 +18,6 @@
             </div>
             <form method="POST" action="crearProducto" enctype="multipart/form-data" autocomplete="off">
                 @csrf
-                <div class="grid grid-cols-1 mt-5 mx-7">
-                    <label for="marca_logo_empresa"
-                        class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold mb-1">MARCA Y LOGO DE LA
-                        EMPRESA</label>
-                    <input
-                        class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent input-image"
-                        type="file" placeholder="" name="marca_logo_empresa" id="marca_logo_empresa" required
-                        autocomplete="off" /><br />
-                    <p class="text-image"> </p><br />
-                    <img class="img-src" src="" />
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-1 gap-5 md:gap-8 mt-5 mx-7">
-                    <div class="grid grid-cols-1">
-                        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">DESCRIPCIÓN DE LA
-                            EMPRESA</label>
-                        <textarea
-                            class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent UpperCase"
-                            type="text" placeholder="" name="descripcion_empresa" id="descripcion_empresa" required autocomplete="off"></textarea>
-                    </div>
-                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                     <div class="grid grid-cols-1">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">CATEGORIA</label>
@@ -90,7 +70,9 @@
                     <input
                         class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent input-image"
                         type="file" placeholder="" name="imagen_producto" id="imagen_producto" required
-                        autocomplete="off" />
+                        autocomplete="off" /><br />
+                        <p class="text-image"> </p><br />
+                        <img class="img-src" src="" />
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                     <div class="grid grid-cols-1">
@@ -102,6 +84,18 @@
                             <option value="" selected></option>
                             @foreach ($medidas as $medida)
                                 <option value="{{ $medida->nombre_medida }}">{{ $medida->nombre_medida }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-1">
+                        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">EMPRESA</label>
+                        <select
+                            class="py-2 px-3 rounded-lg border-2 border-green-600 mt-1 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+                            name="titulo_empresa" id="titulo_empresa" required autocomplete="off">
+                            <option value="" selected></option>
+                            @foreach ($empresas as $empresa)
+                                <option value="{{ $empresa->titulo_empresa }}">{{ $empresa->titulo_empresa }}
                                 </option>
                             @endforeach
                         </select>

@@ -33,7 +33,7 @@
 
                         <div class="mt-4 md:mx-4 md:mt-0">
                             <button>
-                                <a href="#">
+                                <a href="cli-show-empr">
                                     <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Empresas
                                     </h1>
                                 </a>
@@ -91,7 +91,31 @@
                             </p>
                         </div>
                     </div>
+                    <div class="md:flex md:items-start md:-mx-4">
+                        <span
+                            class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                            </svg>
+                        </span>
 
+                        <div class="mt-4 md:mx-4 md:mt-0">
+                            <button>
+                                <a href="cli-reg-empr">
+                                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Registrar Empresa
+                                </a>
+                            </button>
+                            </h1>
+                            <p class="mt-3 text-gray-500 dark:text-gray-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos
+                                vel non corrupti doloribus voluptatum eveniet
+                            </p>
+                        </div>
+                    </div>
                     <div class="md:flex md:items-start md:-mx-4">
                         <span
                             class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
@@ -107,8 +131,7 @@
                         <div class="mt-4 md:mx-4 md:mt-0">
                             <button>
                                 <a href="cli-reg-prod">
-                                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Registrar
-                                        producto
+                                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Registrar Producto
                                 </a>
                             </button>
                             </h1>
