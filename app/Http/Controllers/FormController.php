@@ -71,17 +71,28 @@ class FormController extends Controller
         }
         $empresa->titulo_empresa = $data->titulo_empresa;
         $empresa->descripcion_empresa = $data->descripcion_empresa;
+<<<<<<< HEAD
         //$empresa->historia_empresa = '$data->historia_empresa';
+=======
+        $empresa->historia_empresa = '$data->historia_empresa';
+>>>>>>> 18e5c8cd67402b8c243097f585f2190f25ac3002
         $empresa->mision_empresa = $data->mision_empresa;
         $empresa->vision_empresa = $data->vision_empresa;
         $empresa->whatsapp_empresa = $data->whatsapp_empresa;
         $empresa->facebook_empresa = $data->facebook_empresa;
         $empresa->estado = 'activo';
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 18e5c8cd67402b8c243097f585f2190f25ac3002
 
         $empresa->save();
         return redirect()->to('/');
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 18e5c8cd67402b8c243097f585f2190f25ac3002
 }

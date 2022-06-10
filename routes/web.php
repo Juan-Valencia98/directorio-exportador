@@ -31,7 +31,10 @@ Route::get('cli-reg-empr', [FormController::class, 'empresa']);
 Route::post('crearEmpresa', [FormController::class, 'storeEmpr']);
 
 Route::get('cli-show-empr', [EmpresaController::class, 'index']);
+<<<<<<< HEAD
 
 Route::get('cli-show-det-prod/{id}', [ProductoController::class, 'detProd']);
 
 Route::get('cli-show-det-emp/{id}', [EmpresaController::class, 'detEmp']);
+=======
+>>>>>>> 18e5c8cd67402b8c243097f585f2190f25ac3002
